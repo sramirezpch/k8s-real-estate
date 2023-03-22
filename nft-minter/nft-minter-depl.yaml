@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deploymet
+metadata:
+  name: nft-minter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nft-minter
+  template:
+    metadata:
+      labels:
+        app: nft-minter
+    spec:
+      containers:
+        - name: nft-minter
+          image: sramirezpch/nft-minter
